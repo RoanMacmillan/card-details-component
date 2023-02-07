@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import InputField from '../FormInputs/InputField';
 import SubmitButton from '../FormInputs/SubmitButton';
+import ThankYouMessage from './ThankYouMessage';
 
 function FormContainer() {
   const [name, setName] = useState('');
@@ -18,10 +19,11 @@ function FormContainer() {
   const [errorMessage, setErrorMessage] = useState('');
 
 
-
+  const [submitted, setSubmitted] = useState(false);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
+    console.log(event.target.value);
   };
 
   const handleCardChange = (event) => {
@@ -76,9 +78,18 @@ function FormContainer() {
     if (!isValid) {
       return;
     }
+    setSubmitted(true);
   };
 
   return (
+
+    <>
+        
+
+
+      {!submitted ? (
+
+
     <form className='formContainer' onSubmit={handleSubmit}>
       <InputField label="cardholder Name" value={name} placeholder='e.g. Jane Appleseed' onChange={handleNameChange} className={nameValid ? 'valid' : 'invalid'} />
       {!nameValid && <div className="error">Please enter your name!</div>}
@@ -109,6 +120,10 @@ function FormContainer() {
       <SubmitButton onClick={handleSubmit} />
 
     </form>
+) : (
+ <ThankYouMessage />
+      )}
+    </>
   );
 }
 
