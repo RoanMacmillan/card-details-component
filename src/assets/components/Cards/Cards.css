@@ -1,0 +1,147 @@
+.cardBack,
+.cardFront {
+
+    width: 286px;
+    height: 157px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.cardFront {
+
+    bottom: 0;
+    left: 0;
+    background-image: url('../../images/bg-card-front.png');
+
+}
+
+.cardBack {
+
+    top: 5px;
+    right: 0;
+    background-image: url('../../images/bg-card-back.png');
+}
+
+.cardBackNumber {
+
+    position: absolute;
+    right: 35px;
+    top: 72px;
+    font-size: 9px;
+    line-height: 11px;
+    text-align: right;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.circleContainer img {
+
+    width: 54px;
+    height: 30px;
+    margin-left: 19px;
+    margin-top: 17.6px;
+}
+
+.cardNumberContainer {
+
+    color: white;
+    margin-left: 19px;
+    margin-top: 37px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    /* identical to box height */
+
+    letter-spacing: 2.2px;
+}
+
+
+.cardDetailsContainer {
+
+    margin-left: 19px;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20.6px;
+}
+
+
+
+@media screen and (min-width: 1440px) {
+
+
+
+    .cardBack,
+    .cardFront {
+
+
+        width: 447px;
+        height: 245px;
+
+    }
+
+    .cardBack {
+
+
+        top: unset;
+        bottom: 0;
+    }
+
+    .cardFront {
+
+        bottom: unset;
+    }
+
+    .cardBackNumber {
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 2px;
+        top: 111px;
+        left: unset;
+        right: 55px;
+    }
+
+
+
+    .circleContainer img {
+
+        width: 84px;
+        height: 47px;
+        margin-left: 32px;
+        margin-top: 28px;
+    }
+
+    .cardNumberContainer {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 3.42222px;
+        margin-left: 32px;
+        margin-top: 64px;
+
+    }
+
+
+    .cardDetailsContainer {
+
+        margin-left: 32px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 17px;
+        margin-right: 26.5px;
+    }
+}

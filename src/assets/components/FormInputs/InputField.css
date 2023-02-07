@@ -1,0 +1,125 @@
+input {
+
+    width: 100%;
+    height: 45px;
+    background: #FFFFFF;
+    border: 1px solid #DFDEE0;
+    border-radius: 8px;
+    margin-top: 9px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #21092F;
+    padding-lefT: 16px;
+    cursor: pointer;
+}
+
+input:hover {
+
+    border: 1px solid #6348FE;
+}
+
+input::placeholder {
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #21092F;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+}
+
+.rowInputContainer {
+
+    display: flex;
+
+}
+
+
+
+
+.expContainer input {
+
+    width: 72px;
+}
+
+.cvcContainer input {
+
+    width: 164px;
+
+}
+
+.cvcContainer {
+
+    margin-left: 9px;
+
+}
+
+.submitBtn {
+
+    width: 100%;
+    height: 53px;
+    color: white;
+    border: none;
+    background: #21092F;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    CURSOR: POINTER;
+    transition: all .2s;
+}
+
+.submitBtn:hover {
+
+
+    background: #691f94;
+}
+
+.invalid {
+    border: 1px solid red;
+}
+
+.invalid {
+
+    border: 1px solid #FF5050;
+}
+
+.error {
+
+    color: #FF5050;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+
+
+@media screen and (min-width: 1440px) {
+
+
+    .expContainer input {
+
+        width: 80px;
+    }
+
+    .cvcContainer input {
+
+        width: 191px;
+    
+    }
+
+    
+
+   input {
+
+    margin-bottom: 26px;
+   }
+
+   .submitBtn {
+    margin-top: 14px;
+   }
+}
