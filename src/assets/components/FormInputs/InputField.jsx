@@ -1,8 +1,9 @@
 import React from "react";
 import './InputField.css';
 
-function InputField({ label, value, placeholder, onChange, className }) {
+function InputField({ label, value, placeholder, onChange, className, maxLength }) {
 
+  
 
     return (
       <>    
@@ -14,6 +15,7 @@ function InputField({ label, value, placeholder, onChange, className }) {
           placeholder={placeholder}
           onChange={onChange}
           className={className}
+          maxLength={maxLength}
         />
       </>
     );

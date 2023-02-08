@@ -94,6 +94,36 @@ label {
 
 }
 
+.thankYouMessage {
+
+  width: 343px;
+  height: 291px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+.thankYouMessage span {
+
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 3.42222px;
+  color: #21092F;
+  text-transform: uppercase;
+}
+
+.thankYouMessage p {
+
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #8F8694;
+}
+
 
 @media screen and (min-width: 1440px) {
 
@@ -143,29 +173,8 @@ label {
   .thankYouMessage {
 
     width: 381px;
-    height: 291px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    margin-top: 0;
   }
 
-  .thankYouMessage span {
-
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 36px;
-    text-align: center;
-    letter-spacing: 3.42222px;
-    color: #21092F;
-    text-transform: uppercase;
-  }
-
-  .thankYouMessage p {
-
-    font-size: 18px;
-    line-height: 23px;
-    text-align: center;
-    color: #8F8694;
-  }
+  
 }

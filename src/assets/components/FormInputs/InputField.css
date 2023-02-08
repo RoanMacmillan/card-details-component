@@ -69,6 +69,8 @@ input::placeholder {
     line-height: 23px;
     CURSOR: POINTER;
     transition: all .2s;
+    margin-top: 14px;
+
 }
 
 .submitBtn:hover {
@@ -122,4 +124,6 @@ input::placeholder {
    .submitBtn {
     margin-top: 14px;
    }
+
+   
 }

@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import InputField from '../FormInputs/InputField';
 import SubmitButton from '../FormInputs/SubmitButton';
 import ThankYouMessage from './ThankYouMessage';
+import Logo from '../../images/card-logo.svg';
+import '../Cards/Cards.css'
+import NameInput from '../FormInputs/NameInput';
+import CardInput from '../FormInputs/CardInput';
+import YearInput from '../FormInputs/YearInput';
+import MonthInput from '../FormInputs/MonthInput';
+import CvcInput from '../FormInputs/CvcInput';
 
 function FormContainer() {
   const [name, setName] = useState('');
@@ -20,6 +27,8 @@ function FormContainer() {
 
 
   const [submitted, setSubmitted] = useState(false);
+
+  
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -74,7 +83,7 @@ function FormContainer() {
     }
 
 
-    
+
     if (!isValid) {
       return;
     }
@@ -84,44 +93,74 @@ function FormContainer() {
   return (
 
     <>
-        
 
+      <div className='topContainer'>
 
-      {!submitted ? (
+        <div className='cardBack'><span className='cardBackNumber'>{cvcNumber || '000'}</span></div>
+        <div className='cardFront'>
 
+          <div className='circleContainer'>
 
-    <form className='formContainer' onSubmit={handleSubmit}>
-      <InputField label="cardholder Name" value={name} placeholder='e.g. Jane Appleseed' onChange={handleNameChange} className={nameValid ? 'valid' : 'invalid'} />
-      {!nameValid && <div className="error">Please enter your name!</div>}
-      <InputField label="Card Number" value={cardNumber} placeholder='e.g. 1234 5678 9123 0000' onChange={handleCardChange} className={cardNumberValid ? 'valid' : 'invalid'} />
-      {!cardNumberValid && <div className="error">Invalid card number!</div>}
+            <img src={Logo}></img>
 
-      <div className='rowInputContainer'>
+          </div>
 
-        <div className='expContainer'>
-          <InputField label='exp. date' value={month} placeholder='MM' onChange={handleMonthChange} className={monthValid ? 'valid' : 'invalid'} />
-          {(!monthValid || !yearValid) && <div className='error'>Invalid Expiry</div>}
+          <div className='cardNumberContainer'>
+            {cardNumber || '0000 0000 0000 0000'}
+          </div>
 
-        </div>
-        <div className='expContainer yearContainer'>
-          <InputField label='(mm/yy)' value={year} placeholder='YY' onChange={handleYearChange} className={yearValid ? 'valid' : 'invalid'} />
+          <div className='cardDetailsContainer'>
 
-        </div>
-        <div className='cvcContainer'>
-          <InputField label='cvc' value={cvcNumber} placeholder='e.g. 123' onChange={handleCvcChange} className={cvcNumberValid ? 'valid' : 'invalid'} />
-          {!cvcNumberValid && <div className="error">Invalid CVC!</div>}
+            <span className='frontCardName'>{name || 'jane appleseed'}</span>
+
+            <span className='frontExpiry'>{month || '00'}/{year || '00'}</span>
+
+          </div>
 
         </div>
 
       </div>
 
-      
+      {!submitted ? (
 
-      <SubmitButton onClick={handleSubmit} />
 
-    </form>
-) : (
- <ThankYouMessage />
+        <form className='formContainer' onSubmit={handleSubmit}>
+          {/* <InputField label="cardholder Name" value={name} placeholder='e.g. Jane Appleseed' onChange={handleNameChange} className={nameValid ? 'valid' : 'invalid'} maxLength={25} /> */}
+          <NameInput className={nameValid ? 'valid' : 'invalid'} value={name} onChange={handleNameChange}/>
+          {!nameValid && <div className="error">Please enter your name!</div>}
+          {/* <InputField label="Card Number" value={cardNumber} placeholder='e.g. 1234 5678 9123 0000' onChange={handleCardChange} className={cardNumberValid ? 'valid' : 'invalid'} 
+          maxLength={16} /> */}
+          <CardInput className={cardNumberValid ? 'valid' : 'invalid'} value={cardNumber} onChange={handleCardChange} />
+          {!cardNumberValid && <div className="error">Invalid card number!</div>}
+
+          <div className='rowInputContainer'>
+
+            <div className='expContainer'>
+              {/* <InputField label='exp. date' value={month} placeholder='MM' onChange={handleMonthChange} className={monthValid ? 'valid' : 'invalid'} maxLength={2}/> */}
+              <MonthInput className={monthValid ? 'valid' : 'invalid'} value={month} onChange={handleMonthChange} />
+              {(!monthValid || !yearValid) && <div className='error'>Invalid Expiry</div>}
+
+            </div>
+            <div className='expContainer'>
+              {/* <InputField label='(mm/yy)' value={year} placeholder='YY' onChange={handleYearChange} className={yearValid ? 'valid' : 'invalid'} maxLength={2} /> */}
+              <YearInput className={yearValid ? 'valid' : 'invalid'} value={year} onChange={handleYearChange} />
+            </div>
+            <div className='cvcContainer'>
+              {/* <InputField label='cvc' value={cvcNumber} placeholder='e.g. 123' onChange={handleCvcChange} className={cvcNumberValid ? 'valid' : 'invalid'} maxLength={3}  /> */}
+              <CvcInput className={cvcNumberValid ? 'valid' : 'invalid'} value={cvcNumber} onChange={handleCvcChange} />
+              {!cvcNumberValid && <div className="error">Invalid CVC!</div>}
+
+            </div>
+
+          </div>
+
+
+
+          <SubmitButton onClick={handleSubmit} />
+
+        </form>
+      ) : (
+        <ThankYouMessage />
       )}
     </>
   );
