@@ -10,7 +10,7 @@ const ThankYouMessage = () => {
 
     return (
         <div className='thankYouMessage'>
-            <img src={Tick}></img>
+            <img className='complete' src={Tick}></img>
             <span>thank you!</span>
             <p>We've added your card details!</p>
             <button onClick={handleClick} className='submitBtn'>Continue</button>

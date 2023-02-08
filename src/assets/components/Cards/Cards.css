@@ -6,6 +6,7 @@
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: .3s all;
 }
 
 
@@ -14,6 +15,7 @@
     bottom: 0;
     left: 0;
     background-image: url('../../images/bg-card-front.png');
+    transition: .3s all;
 
 }
 
@@ -22,6 +24,8 @@
     top: 5px;
     right: 0;
     background-image: url('../../images/bg-card-back.png');
+    transition: .3s all;
+
 }
 
 .cardBackNumber {
@@ -35,6 +39,8 @@
     letter-spacing: 1.28571px;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: .3s all;
+
 }
 
 .circleContainer img {
@@ -43,6 +49,8 @@
     height: 30px;
     margin-left: 19px;
     margin-top: 17.6px;
+    transition: .3s all;
+
 }
 
 .cardNumberContainer {
@@ -54,6 +62,7 @@
     font-size: 18px;
     line-height: 23px;
     /* identical to box height */
+    transition: .3s all;
 
     letter-spacing: 2.2px;
 }
@@ -72,6 +81,8 @@
     display: flex;
     justify-content: space-between;
     margin-right: 20.6px;
+    transition: .3s all;
+
 }
 
 
