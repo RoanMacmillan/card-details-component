@@ -8,6 +8,7 @@ function CvcField({value, className, onChange}) {
     <>    
     <label htmlFor='cvc'>cvc</label>
     <input
+      id='cvc'
       type="text"
       value={value}
       placeholder='e.g. 123'

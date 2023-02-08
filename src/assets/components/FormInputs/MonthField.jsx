@@ -8,8 +8,9 @@ function MonthField({value, className, onChange}) {
 
     <>    
 
-    <label htmlFor='month Input'>EXP. DATE</label>
+    <label htmlFor='monthInput'>EXP. DATE</label>
     <input
+      id='monthInput'
       type="text"
       value={value}
       placeholder='MM'

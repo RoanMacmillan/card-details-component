@@ -6,8 +6,9 @@ function YearField({value, className, onChange}) {
 
   return (
     <>    
-    <label htmlFor='year Input'>(mm/yy)</label>
+    <label htmlFor='yearInput'>(mm/yy)</label>
     <input
+      id='yearInput'
       type="text"
       value={value}
       placeholder='YY'

@@ -7,6 +7,7 @@ import CardNumberField from '../FormInputs/CardNumberField';
 import YearField from '../FormInputs/YearField';
 import MonthField from '../FormInputs/MonthField';
 import CvcField from '../FormInputs/CvcField';
+import '../Cards/Cards.css';
 
 function FormContainer() {
   const [name, setName] = useState('');
@@ -82,7 +83,7 @@ function FormContainer() {
         <div className='cardBack'><span className='cardBackNumber'>{cvcNumber || '000'}</span></div>
         <div className='cardFront'>
           <div className='circleContainer'>
-            <img src={Logo}></img>
+            <img src={Logo} alt='Logo'/>
           </div>
           <div className='cardNumberContainer'>
             {cardNumber || '0000 0000 0000 0000'}

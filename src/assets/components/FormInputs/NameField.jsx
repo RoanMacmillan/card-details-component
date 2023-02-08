@@ -6,8 +6,9 @@ function NameField({value, className, onChange}) {
 
   return (
     <>    
-    <label htmlFor='name Input'>cardholder name</label>
+    <label htmlFor='nameInput'>cardholder name</label>
     <input
+      id='nameInput'
       type="text"
       value={value}
       placeholder='e.g. Jane Appleseed'
